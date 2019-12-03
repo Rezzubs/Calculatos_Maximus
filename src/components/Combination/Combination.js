@@ -7,7 +7,7 @@ class Combination extends React.Component {
         return (
             <div className="arvutusContainer">
                 <div className="arvutus">
-                    <div>
+                    <div className="cKast">
                         <img className="C" src={C}></img>
                     </div>
                     <div className="numbrid">

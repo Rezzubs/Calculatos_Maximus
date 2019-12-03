@@ -2,12 +2,13 @@
     background-color: rgb(238, 171, 46);
     width: 60%;
     height: 60%;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .arvutus {
     background-color: rgb(44, 173, 39);
+    flex-grow: 3;
 
     display: grid;
     grid-template-columns: 80% 20%;
@@ -15,6 +16,7 @@
 
 .vastus {
     background-color: rgb(31, 200, 212);
+    flex-grow: 2;
 }
 
 .C {
@@ -35,3 +37,4 @@ input {
     border-radius: 20px;
     margin: 20%;
 }
+
