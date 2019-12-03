@@ -8,8 +8,30 @@
 
 .arvutus {
     background-color: rgb(44, 173, 39);
+
+    display: grid;
+    grid-template-columns: 80% 20%;
 }
 
 .vastus {
     background-color: rgb(31, 200, 212);
+}
+
+.C {
+    max-height: 100%;
+    max-width: 100%;
+    background-color: pink;
+}
+
+.numbrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input {
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 20%;
 }
