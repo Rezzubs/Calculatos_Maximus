@@ -4,13 +4,18 @@
     
     display: flex;
     justify-content: center;
+    align-items: center;
     flex: 12;
 }
 
 .arvutus {
     background-color: rgb(44, 173, 39);
+    width: auto;
+    height: 50%;
 }
 
 .vastus {
     background-color: rgb(31, 200, 212);
+    height: 50%;
+    width: 25%;
 }
