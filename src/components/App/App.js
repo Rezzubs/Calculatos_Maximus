@@ -5,8 +5,8 @@ import Combination from '../Combination/Combination';
 function App() {
   return (
     <div className="App">
-      Tere lapsed
-      <Combination />
+      <div className="navbar">maagiline navbar</div>
+      <Combination className="combination" />
     </div>
   );
 }
