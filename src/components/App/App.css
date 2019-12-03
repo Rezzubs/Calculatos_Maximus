@@ -18,3 +18,13 @@
   font-size: 4rem;
   flex: 1;
 }
+
+.container {
+  background-color: rgb(32, 32, 131);
+  font-size: 4rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 12;
+}

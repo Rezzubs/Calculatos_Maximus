@@ -1,21 +1,15 @@
-.container {
-    background-color: rgb(32, 32, 131);
-    font-size: 4rem;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 12;
+.arvutusContainer {
+    background-color: rgb(238, 171, 46);
+    width: 60%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .arvutus {
     background-color: rgb(44, 173, 39);
-    width: auto;
-    height: 50%;
 }
 
 .vastus {
     background-color: rgb(31, 200, 212);
-    height: 50%;
-    width: 25%;
 }

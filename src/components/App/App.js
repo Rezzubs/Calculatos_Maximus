@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <div className="navbar">maagiline navbar</div>
-      <Combination className="combination" />
+      <div className="container">
+        <Combination className="combination" />
+      </div>
     </div>
   );
 }
