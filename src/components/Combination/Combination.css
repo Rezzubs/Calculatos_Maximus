@@ -1,7 +1,7 @@
 /* test colors */
 
 .combination {
-    background-color: rgb(216, 159, 53);
+    /* background-color: rgb(216, 159, 53); */
     justify-self: center;
     align-self: center;
     max-width: 60%;
@@ -11,30 +11,32 @@
 }
 
 .CImg {
-    background-color: pink;
+    /* background-color: pink; */
     display: grid;
 }
 
 .input {
-    background-color: powderblue;
+    /* background-color: powderblue; */
     display: grid;
 }
 
 .equals {
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     display: grid;
 }
 
 .awnser {
-    background-color: seagreen;
+    /* background-color: seagreen; */
     display: flex;
     word-wrap: break-word;
     word-break: break-all;
 }
 
 input {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
+    border: .1em solid black;
+    text-align-last: center;
 
     height: 20%;
     min-width: 80%;
