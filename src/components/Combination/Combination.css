@@ -1,0 +1,39 @@
+/* test colors */
+
+.combination {
+    background-color: rgb(216, 159, 53);
+    justify-self: center;
+    align-self: center;
+    max-width: 60%;
+
+    display: grid;
+    grid-template-columns: 6fr 1fr 3fr 6fr;
+}
+
+.CImg {
+    background-color: pink;
+    display: grid;
+}
+
+.input {
+    background-color: powderblue;
+}
+
+.equals {
+    background-color: rebeccapurple;
+}
+
+.awnser {
+    background-color: seagreen;
+}
+
+input {
+    max-height: 3em;
+    max-width: 6em;
+    border-radius: .8em;
+}
+
+img {
+    max-width: 90%;
+    justify-self: center;
+}
