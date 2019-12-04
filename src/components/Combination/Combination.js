@@ -10,7 +10,7 @@ class Combination extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            awnser: '',
+            answer: '',
             upperValue: '',
             lowerValue: ''
         };
@@ -37,9 +37,9 @@ class Combination extends React.Component {
         const facLower = factorial(lower)
         const facNMinusK = factorial (nMinusK)
 
-        const awnser = Math.round(facLower / (facUpper * facNMinusK))
+        const answer = Math.round(facLower / (facUpper * facNMinusK))
         return (
-            awnser
+            answer
         )
     }
     
@@ -57,7 +57,7 @@ class Combination extends React.Component {
                     <div className="equals">
                         <img src={equals}></img>
                     </div>
-                    <div className="awnser">
+                    <div className="answer">
                         <h1>{this.calculate()}</h1>
                     </div>
                 </div>
