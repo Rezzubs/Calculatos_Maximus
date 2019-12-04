@@ -17,23 +17,47 @@
 
 .input {
     background-color: powderblue;
+    display: grid;
 }
 
 .equals {
     background-color: rebeccapurple;
+    display: grid;
 }
 
 .awnser {
     background-color: seagreen;
+    display: flex;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 input {
-    max-height: 3em;
-    max-width: 6em;
+    
+
+    height: 20%;
+    min-width: 80%;
     border-radius: .8em;
+    margin: 30% 0;
 }
 
+.upper {
+    align-self: start;
+}
+
+.lower {
+    align-self: end;
+}
 img {
     max-width: 90%;
     justify-self: center;
+    align-self: center;
+}
+
+h1 {
+    align-self: center;
+    justify-self: start;
+    margin-left: 5%;
+
+    font-size: 5em;
 }
