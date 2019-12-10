@@ -1,0 +1,65 @@
+.variation {
+    /* background-color: rgb(216, 159, 53); */
+    justify-self: center;
+    align-self: center;
+    max-width: 60%;
+
+    display: grid;
+    grid-template-columns: 6fr 1fr 3fr 6fr;
+}
+
+.VImg {
+    /* background-color: pink; */
+    display: grid;
+}
+
+.input {
+    /* background-color: powderblue; */
+    display: grid;
+}
+
+.equals {
+    /* background-color: rebeccapurple; */
+    display: grid;
+}
+
+.answer {
+    /* background-color: seagreen; */
+    display: flex;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+input {
+    font-size: 2em;
+    font-weight: bold;
+    border: .1em solid black;
+    text-align-last: center;
+
+    height: 20%;
+    min-width: 80%;
+    border-radius: .8em;
+    margin: 30% 0;
+}
+
+.upper {
+    align-self: start;
+}
+
+.lower {
+    align-self: end;
+}
+img {
+    max-width: 90%;
+    justify-self: center;
+    align-self: center;
+}
+
+h1 {
+    align-self: center;
+    justify-self: start;
+    margin-left: 5%;
+
+    font-size: 5em;
+    font-weight: bold;
+}
