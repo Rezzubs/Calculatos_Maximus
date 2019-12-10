@@ -18,7 +18,7 @@ class Combination extends React.Component {
         //binds
         this.handleUpperChange = this.handleUpperChange.bind(this);
         this.handleLowerChange = this.handleLowerChange.bind(this);
-        this.clearValue = this.clearValue.bind(this)
+        this.clearValue = this.clearValue.bind(this);
     }
 
     handleUpperChange(e) {
@@ -28,7 +28,6 @@ class Combination extends React.Component {
     handleLowerChange(e) {
         this.setState({ lowerValue: e.target.value })
     }
-
     
     clearValue(e) {
         e.target.value = ''

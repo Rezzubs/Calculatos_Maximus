@@ -1,3 +1,4 @@
+/* default styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,6 +20,8 @@ body {
   grid-template-rows: 5% 95%;
 }
 
+
+/* navbar css */
 .navbar {
   /* background-color: rgb(141, 63, 63); */
   /* border-bottom: .2em solid black; */
@@ -41,11 +44,13 @@ body {
 }
 
 
-.container {
-  /* background-color: rgb(47, 77, 177); */
-  display: grid;
-}
 
 .navContainer:hover {
   background-color: yellow;
+}
+/* navbar end */
+
+.container {
+  /* background-color: rgb(47, 77, 177); */
+  display: grid;
 }

@@ -12,10 +12,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       currentDisplay: '2'
-    }
+    };
 
     this.changeToC = this.changeToC.bind(this);
-    this.changeToV = this.changeToV.bind(this)
+    this.changeToV = this.changeToV.bind(this);
   }
 
   changeToC() {
