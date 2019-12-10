@@ -23,9 +23,29 @@ body {
   /* background-color: rgb(141, 63, 63); */
   /* border-bottom: .2em solid black; */
   box-shadow: 0px -20px 11px 26px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: flex-start;
 }
+
+.navContainer {
+  background-color: gray;
+  width: 4.5em;
+  border: 1px solid black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.navImg {
+  height: 3em;
+}
+
 
 .container {
   /* background-color: rgb(47, 77, 177); */
   display: grid;
+}
+
+.navContainer:hover {
+  background-color: yellow;
 }
