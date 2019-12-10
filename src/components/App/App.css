@@ -32,7 +32,8 @@ body {
 
 .navContainer {
   background-color: gray;
-  width: 4.5em;
+  min-width: 4%;
+  max-width: 10%;
   border: 1px solid black;
   display: grid;
   justify-content: center;
@@ -54,3 +55,4 @@ body {
   /* background-color: rgb(47, 77, 177); */
   display: grid;
 }
+
