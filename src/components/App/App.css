@@ -23,36 +23,37 @@ body {
 
 /* navbar css */
 .navbar {
-  /* background-color: rgb(141, 63, 63); */
-  /* border-bottom: .2em solid black; */
-  box-shadow: 0px -20px 11px 26px rgba(0,0,0,0.5);
   display: flex;
   justify-content: flex-start;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.5);
 }
 
 .navContainer {
-  background-color: gray;
   min-width: 4%;
-  max-width: 10%;
-  border: 1px solid black;
   display: grid;
   justify-content: center;
   align-items: center;
+  border-right: 2px solid rgb(199, 199, 199);
 }
 
 .navImg {
   height: 3em;
+  padding: 0em 2em;
 }
 
-
-
 .navContainer:hover {
-  background-color: yellow;
+  background-color: rgba(46,227,255,1);
+}
+
+.navContainer:active {
+  border: 2px solid rgb(31, 31, 31);
+  background-color: rgba(0,167,222,1);
 }
 /* navbar end */
 
 .container {
   /* background-color: rgb(47, 77, 177); */
   display: grid;
+  background: linear-gradient(to right, rgba(46,227,255,1) 0%, rgba(0,167,222,1) 100%);
 }
 
