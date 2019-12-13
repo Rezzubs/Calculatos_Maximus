@@ -16,6 +16,7 @@ class App extends React.Component {
 
     this.changeToC = this.changeToC.bind(this);
     this.changeToV = this.changeToV.bind(this);
+    this.changeToPy = this.changeToPy.bind(this);
   }
 
   changeToC() {
@@ -30,11 +31,25 @@ class App extends React.Component {
     })
   }
 
+  changeToPy() {
+    this.setState({
+      currentDisplay: 3
+    })
+  }
+
   displayElement() {
     if (this.state.currentDisplay == 1) {
       return <Combination />
     } else if (this.state.currentDisplay == 2) {
       return <Variation />
+    } else if (this.state.currentDisplay == 3) {
+      return (
+        <div>
+          <h1>insert component here!</h1>
+          <br></br>
+          <h1>↓</h1>
+        </div>
+      )
     }
   }
 
@@ -49,7 +64,7 @@ class App extends React.Component {
           <div onClick={this.changeToV} id="2" className="navContainer">
             <img className="navImg" src={V}></img>
           </div>
-          <div onClick={this.elementChange} id="3" className="navContainer">
+          <div onClick={this.changeToPy} id="3" className="navContainer">
             <img className="navImg"></img>
           </div>
         </div>
