@@ -37,8 +37,9 @@ body {
 }
 
 .navImg {
+  box-sizing: content-box;
   height: 3em;
-  padding: 0em 2em;
+  padding: 0em 1em;
 }
 
 .navContainer:hover {

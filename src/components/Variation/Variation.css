@@ -3,12 +3,12 @@
     justify-self: center;
     align-self: center;
     max-width: 60%;
+    max-height: 90%;
 
     display: grid;
     grid-template-columns: 6fr 1fr 3fr 6fr;
 
     /* styling */
-    box-sizing: content-box;
     background-color: white;
     border-radius: 2em;
     padding: 1em;
