@@ -35,3 +35,39 @@
 input {
     max-width: 80%;
 }
+
+.round {
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+
+    background-color: white;
+    display: grid;
+    align-items: center;
+    text-align: center;
+
+    height: 6em;
+    width: 6em;
+    border-radius: 3em;
+    border: .2em solid black;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+.roundInputDiv {
+    position: absolute;
+    bottom: 2em;
+    left: 10em;
+    height: 6em;
+
+    display: grid;
+    align-items: center;
+}
+
+.roundInput {
+    margin: 0;
+    height: 2em;
+    width: 6em;
+}
