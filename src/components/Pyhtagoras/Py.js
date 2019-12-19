@@ -115,8 +115,13 @@ class Py extends React.Component {
     }
 
     roundChange(e) {
+        let newValue = 1
+
+        for (let i = 0; i < e.target.value; i++) {
+            newValue += '0'
+        }
         this.setState({
-            rounding: e.target.value
+            rounding: newValue
         })
     }
 
