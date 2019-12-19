@@ -4,7 +4,8 @@ import Combination from '../Combination/Combination';
 import Variation from '../Variation/Variation';
 import { tsConstructorType } from '@babel/types';
 import C from '../Combination/C.png'
-import V from '../Variation/V.png'
+import V from '../Variation/V.png';
+import Py from '../Pyhtagoras/Py'
 
 
 class App extends React.Component {
@@ -44,11 +45,7 @@ class App extends React.Component {
       return <Variation />
     } else if (this.state.currentDisplay == 3) {
       return (
-        <div>
-          <h1>insert component here!</h1>
-          <br></br>
-          <h1>↓</h1>
-        </div>
+        <Py />
       )
     }
   }

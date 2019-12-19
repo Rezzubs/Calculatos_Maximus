@@ -1,0 +1,36 @@
+.Py {
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    max-width: 60%;
+    border-radius: 2em;
+    padding: 2em;
+}
+
+/* debug colors */
+.a {
+    /* background-color: red; */
+}
+
+.b {
+    /* background-color: skyblue; */
+}
+
+.c {
+    /* background-color: seagreen; */
+}
+
+.a, .b, .c {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    align-content: center;
+}
+
+input {
+    max-width: 80%;
+}
