@@ -13,6 +13,7 @@ class Py extends React.Component {
         this.getValue = this.getValue.bind(this);
         this.calculate = this.calculate.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.clearValue = this.clearValue.bind(this);
         this.clearAll = this.clearAll.bind(this);
     }
 
@@ -37,16 +38,29 @@ class Py extends React.Component {
         const b2 = b * b;
         const c2 = c * c;
 
-        if (a && b && !c) {
+        if (a && b) {
             this.setState({
                 cValue: Math.sqrt(a2 + b2)                
             });
             document.getElementById('cInput').value = this.state.cValue;
+        } else if (b && c) {
+            this.setState({
+                aValue: Math.sqrt(c2 - b2)
+            })
+        } else if (a && c) {
+            this.setState({
+                bValue: Math.sqrt(c2 - a2)
+            })
         }
     }
 
     clearValue(e) {
-        e.target.value = ''
+        e.target.value = '';
+        this.setState({
+            aValue: document.getElementById('aInput').value,
+            bValue: document.getElementById('bInput').value,
+            cValue: document.getElementById('cInput').value
+        })
     }
 
     clearAll() {
