@@ -23,6 +23,7 @@
 .c {
     /* background-color: seagreen; */
 }
+/* color end */
 
 .a, .b, .c {
     display: grid;
