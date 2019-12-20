@@ -1,5 +1,6 @@
 import React from 'react';
 import './Py.css'
+import Guide from '../Guide/Guide'
 
 class Py extends React.Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class Py extends React.Component {
             aValue: '',
             bValue: '',
             cValue: '',
-            displayRound: 0,
+            displayRoundBox: 0,
             rounding: 100
         };
 
@@ -18,7 +19,7 @@ class Py extends React.Component {
         this.clearValue = this.clearValue.bind(this);
         this.clearAll = this.clearAll.bind(this);
         this.roundInput = this.roundInput.bind(this);
-        this.displayRound = this.displayRound.bind(this);
+        this.displayRoundBox = this.displayRoundBox.bind(this);
         this.roundChange = this.roundChange.bind(this)
     }
 
@@ -92,20 +93,20 @@ class Py extends React.Component {
     }
 
     // roundJS
-    displayRound() {
-        if (this.state.displayRound == 0) {
+    displayRoundBox() {
+        if (this.state.displayRoundBox == 0) {
             this.setState({
-                displayRound: 1
+                displayRoundBox: 1
             });
         } else {
             this.setState({
-                displayRound: 0
+                displayRoundBox: 0
             });
         }
     }
 
     roundInput() {
-        if (this.state.displayRound == 1) {
+        if (this.state.displayRoundBox == 1) {
             return (
                 <div className="roundInputDiv">
                     <input onChange={this.roundChange} id="roundInput" className="roundInput"></input>
@@ -144,10 +145,12 @@ class Py extends React.Component {
                     </div>
                 </div>
 
-                <div onClick={this.displayRound} className="round" >
+                <div onClick={this.displayRoundBox} className="round" >
                     <h2>R</h2>
                 </div>
                 {this.roundInput()}
+
+                <Guide currentDisplay={this.props.currentDisplay}/>
             </div>
         )
     }

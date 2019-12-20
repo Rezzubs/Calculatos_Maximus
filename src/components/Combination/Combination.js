@@ -3,6 +3,7 @@ import './Combination.css'
 import C from './C.png'
 import equals from './Equals.png'
 import factorial from '../Factorial/Factorial'
+import Guide from '../Guide/Guide'
 
 
 
@@ -66,6 +67,7 @@ class Combination extends React.Component {
                         <h1>{this.calculate()}</h1>
                     </div>
                 </div>
+                <Guide currentDisplay={this.props.currentDisplay}/>
             </div>
         )
     }

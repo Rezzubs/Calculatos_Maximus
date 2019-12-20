@@ -40,12 +40,12 @@ class App extends React.Component {
 
   displayElement() {
     if (this.state.currentDisplay == 1) {
-      return <Combination />
+      return <Combination currentDisplay={this.state.currentDisplay}/>
     } else if (this.state.currentDisplay == 2) {
-      return <Variation />
+      return <Variation currentDisplay={this.state.currentDisplay}/>
     } else if (this.state.currentDisplay == 3) {
       return (
-        <Py />
+        <Py currentDisplay={this.state.currentDisplay}/>
       )
     }
   }

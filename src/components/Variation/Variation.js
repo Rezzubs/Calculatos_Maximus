@@ -3,6 +3,7 @@ import './Variation.css';
 import V from './V.png';
 import equals from './Equals.png';
 import factorial from '../Factorial/Factorial';
+import Guide from '../Guide/Guide'
 
 
 
@@ -65,6 +66,7 @@ class Variation extends React.Component {
                         <h1>{this.calculate()}</h1>
                     </div>
                 </div>
+                <Guide currentDisplay={this.props.currentDisplay}/>
             </div>
         )
     }

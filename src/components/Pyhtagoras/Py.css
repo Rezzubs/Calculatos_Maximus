@@ -9,6 +9,9 @@
     max-width: 60%;
     border-radius: 2em;
     padding: 2em;
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.5);
+
+    z-index: 2;
 }
 
 /* debug colors */
@@ -41,7 +44,8 @@ input {
     bottom: 2em;
     left: 2em;
 
-    background-color: white;
+    background-color: rgb(68, 0, 255);
+    color: black;
     display: grid;
     align-items: center;
     text-align: center;
@@ -50,6 +54,10 @@ input {
     width: 6em;
     border-radius: 3em;
     border: .2em solid black;
+    user-select: none;
+    box-shadow: 5px 5px 30px 0px rgba(0,0,0,0.3);
+
+    z-index: 2;
 }
 
 h2 {
@@ -70,4 +78,15 @@ h2 {
     margin: 0;
     height: 2em;
     width: 6em;
+}
+
+.round:hover {
+    background-color: rgb(92, 32, 255);
+    color: white;
+}
+
+
+.round:active {
+    background-color:rgb(56, 0, 211);
+    border: .25em solid black;
 }
