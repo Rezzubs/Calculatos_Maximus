@@ -1,5 +1,6 @@
 import React from 'react';
 import './Guide.css'
+import PyHelp from './HelpBox/PyHelp'
 
 class Guide extends React.Component {
     constructor(props) {
@@ -10,6 +11,13 @@ class Guide extends React.Component {
 
         this.displayHelp = this.displayHelp.bind(this)
     }
+
+    PyGuide() {
+        return (
+            <PyHelp />
+        )
+    }
+
     helpBox() {
         if (this.props.currentDisplay == 1 && this.state.displayHelp){
             return (
@@ -21,7 +29,7 @@ class Guide extends React.Component {
             )
         } else if (this.props.currentDisplay == 3 && this.state.displayHelp) {
             return (
-                <div>ei</div>
+                this.PyGuide()
             )
         }
     }

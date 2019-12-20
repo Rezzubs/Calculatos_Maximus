@@ -112,7 +112,7 @@ class Py extends React.Component {
         if (this.state.displayRoundBox == 1) {
             return (
                 <div className="roundInputDiv">
-                    <input onChange={this.roundChange} id="roundInput" className="roundInput"></input>
+                    <input onChange={this.roundChange} id="roundInput" className="roundInput" onClick={this.clearValue}></input>
                 </div>
             )
         }

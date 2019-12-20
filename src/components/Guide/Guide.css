@@ -3,6 +3,8 @@
     /* background-color: rgb(119, 68, 68); */
     width: 100%;
     height: 95%;
+
+    display: grid;
 }
 
 .guideButton {
@@ -28,4 +30,8 @@
 .guideButton:active {
     background-color:rgb(56, 0, 211);
     border: .25em solid black;
+}
+
+h1 {
+    user-select: none;
 }
