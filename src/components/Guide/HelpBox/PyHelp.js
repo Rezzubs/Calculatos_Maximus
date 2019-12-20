@@ -21,7 +21,7 @@ class PyHelp extends React.Component {
                         <img className='helpImg' src={Py1}></img>
                         <img className='helpImg' src={Py2}></img>
                     </div>
-                    <span>imgage credit <a href="https://www.mathsisfun.com/pythagoras.html">mathisfun.com</a></span>
+                    <span>imgage credit and further reading <a href="https://www.mathsisfun.com/pythagoras.html" target="_blank">mathisfun.com</a></span>
                 </div>
 
             </div>

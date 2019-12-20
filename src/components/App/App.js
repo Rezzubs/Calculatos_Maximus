@@ -12,7 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentDisplay: '3'
+      currentDisplay: '1'
     };
 
     this.changeToC = this.changeToC.bind(this);

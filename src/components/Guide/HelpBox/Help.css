@@ -30,6 +30,9 @@ p {
 
 .helpImg {
     border: .2em solid black;
+    border-radius: 1em;
+    max-height: 100%;
+    width: auto;
 }
 
 span {
