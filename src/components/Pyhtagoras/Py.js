@@ -2,6 +2,8 @@ import React from 'react';
 import './Py.css'
 import Guide from '../Guide/Guide'
 
+const defaultRounding = 100
+
 class Py extends React.Component {
     constructor(props) {
         super(props);
@@ -10,7 +12,7 @@ class Py extends React.Component {
             bValue: '',
             cValue: '',
             displayRoundBox: 0,
-            rounding: 100
+            rounding: defaultRounding
         };
 
         this.getValue = this.getValue.bind(this);
@@ -74,7 +76,7 @@ class Py extends React.Component {
     }
 
 
-    clearHandle
+    // clearHandle
     clearValue(e) {
         e.target.value = '';
         this.setState({
@@ -100,7 +102,8 @@ class Py extends React.Component {
             });
         } else {
             this.setState({
-                displayRoundBox: 0
+                displayRoundBox: 0,
+                rounding: defaultRounding
             });
         }
     }
@@ -117,6 +120,9 @@ class Py extends React.Component {
 
     roundChange(e) {
         let newValue = 1
+        if (!e.target.value) {
+            newValue = defaultRounding;
+        }
 
         for (let i = 0; i < e.target.value; i++) {
             newValue += '0'

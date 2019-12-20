@@ -78,6 +78,8 @@ h2 {
     margin: 0;
     height: 2em;
     width: 6em;
+
+    z-index: 2;
 }
 
 .round:hover {
