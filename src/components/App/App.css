@@ -60,3 +60,7 @@ body {
   display: grid;
   background: linear-gradient(to right, rgba(46,227,255,1) 0%, rgba(0,167,222,1) 100%);
 }
+
+img {
+  user-select: none;
+}
