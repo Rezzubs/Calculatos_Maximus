@@ -22,7 +22,7 @@ class Py extends React.Component {
         this.clearAll = this.clearAll.bind(this);
         this.roundInput = this.roundInput.bind(this);
         this.displayRoundBox = this.displayRoundBox.bind(this);
-        this.roundChange = this.roundChange.bind(this)
+        this.roundChange = this.roundChange.bind(this);
     }
 
     getValue() {
@@ -130,6 +130,13 @@ class Py extends React.Component {
         this.setState({
             rounding: newValue
         })
+
+        //freeze prevention
+        const maxValue = 1000
+
+        if (e.target.value > maxValue) {
+            e.target.value = maxValue;
+        }
     }
 
 
