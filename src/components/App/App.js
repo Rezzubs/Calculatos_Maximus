@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
+
+//component
 import Combination from '../Combination/Combination';
 import Variation from '../Variation/Variation';
-import { tsConstructorType } from '@babel/types';
+import Py from '../Pyhtagoras/Py'
+
+//img
 import C from '../Combination/C.png'
 import V from '../Variation/V.png';
-import Py from '../Pyhtagoras/Py'
+import PyImg from '../Pyhtagoras/Py.png'
 
 
 class App extends React.Component {
@@ -44,9 +48,7 @@ class App extends React.Component {
     } else if (this.state.currentDisplay == 2) {
       return <Variation currentDisplay={this.state.currentDisplay}/>
     } else if (this.state.currentDisplay == 3) {
-      return (
-        <Py currentDisplay={this.state.currentDisplay}/>
-      )
+      return <Py currentDisplay={this.state.currentDisplay}/>
     }
   }
 
@@ -62,7 +64,7 @@ class App extends React.Component {
             <img className="navImg" src={V}></img>
           </div>
           <div onClick={this.changeToPy} id="3" className="navContainer">
-            <img className="navImg"></img>
+            <img className="navImg" src={PyImg}></img>
           </div>
         </div>
         {this.displayElement()}

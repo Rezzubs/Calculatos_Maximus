@@ -42,7 +42,12 @@ class Variation extends React.Component {
         const facLower = factorial(lower)
         const facNMinusK = factorial (nMinusK)
 
-        const answer = Math.round(facLower / facNMinusK)
+        let answer = Math.round(facLower / facNMinusK)
+
+        if (upper > lower) {
+            answer = 0
+        }
+
         return (
             answer
         )
