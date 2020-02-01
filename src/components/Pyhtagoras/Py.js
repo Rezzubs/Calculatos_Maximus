@@ -11,7 +11,7 @@ class Py extends React.Component {
             aValue: '',
             bValue: '',
             cValue: '',
-            displayRoundBox: 0,
+            displayRoundBox: 1,
             rounding: defaultRounding
         };
 
@@ -112,7 +112,7 @@ class Py extends React.Component {
         if (this.state.displayRoundBox == 1) {
             return (
                 <div className="roundInputDiv">
-                    <input onChange={this.roundChange} id="roundInput" className="roundInput" onClick={this.clearValue}></input>
+                    <input placeholder="Rounding" onChange={this.roundChange} id="roundInput" className="roundInput" onClick={this.clearValue}></input>
                 </div>
             )
         }
@@ -156,6 +156,7 @@ class Py extends React.Component {
                         <h1>c</h1>
                         <input onChange={this.handleChange} id="cInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.cValue}></input>
                     </div>
+                    {this.roundInput()}
                 </div>
                 <Guide currentDisplay={this.props.currentDisplay} displayHelp={this.props.displayHelp}/>
             </div>

@@ -9,8 +9,10 @@ class PyHelp extends React.Component {
             <div className='helpBox'>
                 <div className='text'>
                     <h2>Pythagoras Theorem</h2>
-                    <p>Click on and input to clear the value</p>
-                    <p>Double Click on and input to clear all values</p>
+                    <p><strong>Click</strong> on and input to clear the value</p>
+                    <p><strong>Double Click</strong> on and input to clear all values</p>
+                    <p><strong>Rounding</strong> changes the rounding decimal:</p>
+                    <p>1 -> 0.1, 2 -> 0.01 etc.</p>
                 </div>
                 <br></br>
                 <div className='imgDiv'>

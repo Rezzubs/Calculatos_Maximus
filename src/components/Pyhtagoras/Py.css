@@ -33,3 +33,8 @@ h2 {
 h1 {
     padding-left: 0.5em;
 }
+
+
+.roundInput {
+    width: 40%;
+}
