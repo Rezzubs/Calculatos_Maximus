@@ -162,8 +162,6 @@ class Py extends React.Component {
                     <h2>R</h2>
                 </div>
                 {this.roundInput()}
-
-                <Guide currentDisplay={this.props.currentDisplay}/>
             </div>
         )
     }

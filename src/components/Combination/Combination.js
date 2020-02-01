@@ -67,7 +67,6 @@ class Combination extends React.Component {
                         <h1>{this.calculate()}</h1>
                     </div>
                 </div>
-                <Guide currentDisplay={this.props.currentDisplay}/>
             </div>
         )
     }

@@ -7,48 +7,30 @@ import CHelp from './HelpBox/CHelp'
 class Guide extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            displayHelp: 0
-        }
-
-        this.displayHelp = this.displayHelp.bind(this)
     }
 
     helpBox() {
-        if (this.props.currentDisplay == 1 && this.state.displayHelp){
+        if (this.props.currentDisplay == 1 && this.props.displayHelp === 1){
             return (
                 <CHelp />
             )
-        }else if (this.props.currentDisplay == 2 && this.state.displayHelp) {
+        }else if (this.props.currentDisplay == 2 && this.props.displayHelp === 1) {
             return (
                 <VHelp />
             )
-        } else if (this.props.currentDisplay == 3 && this.state.displayHelp) {
+        } else if (this.props.currentDisplay == 3 && this.props.displayHelp === 1) {
             return (
                 <PyHelp />
             )
         }
     }
 
-    displayHelp() {
-        if (!this.state.displayHelp) {
-            this.setState({
-                displayHelp: 1
-            })
-        } else {
-            this.setState({
-                displayHelp: 0
-            })
-        }
-    }
+    
 
 
     render() {
         return (
             <div className='Guide'>
-                <div onClick={this.displayHelp} className='guideButton'>
-                    <h1 className="QM">?</h1>
-                </div>
                 {this.helpBox()}
             </div>
         )
