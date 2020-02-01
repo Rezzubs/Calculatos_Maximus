@@ -20,6 +20,7 @@ class Variation extends React.Component {
         this.handleUpperChange = this.handleUpperChange.bind(this);
         this.handleLowerChange = this.handleLowerChange.bind(this);
         this.clearValue = this.clearValue.bind(this);
+        this.clearAll = this.clearAll.bind(this);
     }
 
     handleUpperChange(e) {
@@ -52,6 +53,13 @@ class Variation extends React.Component {
             answer
         )
     }
+
+    clearAll() {
+        this.setState({
+            upperValue: '',
+            lowerValue: ''
+        })
+    }
     
     render() {
         return (
@@ -61,8 +69,8 @@ class Variation extends React.Component {
                         <img src={V}></img>
                     </div>
                     <div className="input">
-                        <input className="upper" upperValue={this.state.upperValue} onChange={this.handleUpperChange} onClick={this.clearValue}></input>
-                        <input className="lower" lowerValue={this.state.lowerValue} onChange={this.handleLowerChange} onClick={this.clearValue}></input>
+                        <input className="upper" upperValue={this.state.upperValue} onChange={this.handleUpperChange} onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.upperValue}></input>
+                        <input className="lower" lowerValue={this.state.lowerValue} onChange={this.handleLowerChange} onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.lowerValue}></input>
                     </div>
                     <div className="equals">
                         <img src={equals}></img>
