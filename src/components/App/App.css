@@ -24,6 +24,7 @@ body {
 
 /* navbar css */
 .navbar {
+  background-color: rgb(31, 31, 31);
   display: flex;
   justify-content: flex-start;
   box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
@@ -35,32 +36,42 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  border-right: 2px solid rgb(199, 199, 199);
+  border-right: 2px solid rgb(0, 0, 0);
 }
 
 .navImg {
   box-sizing: content-box;
   /* height: 3em; */
-  max-height: 90%;
-  padding: 0em 1em;
+  max-height: 75%;
+  padding: 0em 1.5em;
+  filter: invert(90%)
 }
 
 .navContainer:hover {
-  background-color: rgba(46,227,255,1);
+  background-color: rgb(68, 0, 255);
 }
 
 .navContainer:active {
-  border: 2px solid rgb(31, 31, 31);
-  background-color: rgba(0,167,222,1);
+  background-color: rgb(56, 0, 211);
 }
 /* navbar end */
 
 .container {
   /* background-color: rgb(47, 77, 177); */
   display: grid;
-  background: linear-gradient(to right, rgba(46,227,255,1) 0%, rgba(0,167,222,1) 100%);
 }
 
 img {
   user-select: none;
+}
+
+input {
+  width: 100%;
+  min-height: 25%;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid rgb(97, 97, 97);
+  border-radius: 0.3em;
+  margin: 1em 0;
 }
