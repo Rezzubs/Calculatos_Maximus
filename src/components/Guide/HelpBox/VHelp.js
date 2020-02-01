@@ -7,21 +7,17 @@ class VHelp extends React.Component {
     render() {
         return (
             <div className='helpBox'>
-                <h1>Variations (<a href="https://en.wikipedia.org/wiki/Permutation" target="_blank"><em>permutations</em></a>)</h1>
-                <div className='textAndImg'>
-                    <div>
-                        <br></br>
-                        <p><b>Click</b> on an input to clear it</p>
-
-                    </div>
-                    <div className='imgDiv'>
-                        
-                        <img src={VImg} className='helpImg'></img>
-                        <img src={VImg2} className='helpImg'></img>
-                    </div>
-                    <span>image credit and further reading: <a href="https://www.mathsisfun.com/combinatorics/combinations-permutations.html" target="_blank">mathisfun.com</a></span>
+                <div className='text'>
+                    <h2>Variations</h2>
+                    <p>Click on and input to clear the value</p>
+                    <p>Double Click on and input to clear all values</p>
                 </div>
-
+                <br></br>
+                <div className='imgDiv'>
+                    <img className='helpImg' src={VImg}></img>
+                    <img className='helpImg' src={VImg2}></img>
+                </div>
+                <span>further reading <a href='https://www.mathsisfun.com/combinatorics/combinations-permutations.html' target='blank'>mathisfun.com</a></span>
             </div>
         )
     }

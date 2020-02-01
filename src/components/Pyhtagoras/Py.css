@@ -26,58 +26,8 @@ input {
     max-width: 80%;
 }
 
-.round {
-    position: absolute;
-    bottom: 2em;
-    left: 2em;
-
-    background-color: rgb(68, 0, 255);
-    color: black;
-    display: grid;
-    align-items: center;
-    text-align: center;
-
-    height: 6em;
-    width: 6em;
-    border-radius: 3em;
-    border: .2em solid black;
-    user-select: none;
-    box-shadow: 5px 5px 30px 0px rgba(0,0,0,0.3);
-
-    z-index: 2;
-}
-
 h2 {
     font-size: 3em;
-}
-
-.roundInputDiv {
-    position: absolute;
-    bottom: 2em;
-    left: 10em;
-    height: 6em;
-
-    display: grid;
-    align-items: center;
-}
-
-.roundInput {
-    margin: 0;
-    height: 2em;
-    width: 6em;
-
-    z-index: 2;
-}
-
-.round:hover {
-    background-color: rgb(92, 32, 255);
-    color: white;
-}
-
-
-.round:active {
-    background-color:rgb(56, 0, 211);
-    border: .25em solid black;
 }
 
 h1 {

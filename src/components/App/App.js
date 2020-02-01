@@ -17,7 +17,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentDisplay: 1,
+      currentDisplay: 3,
       displayHelp: 1
     };
 
@@ -50,9 +50,9 @@ class App extends React.Component {
     if (this.state.currentDisplay == 1) {
       return <Combination currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
     } else if (this.state.currentDisplay == 2) {
-      return <Variation />
+      return <Variation currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
     } else if (this.state.currentDisplay == 3) {
-      return <Py />
+      return <Py currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
     }
   }
 

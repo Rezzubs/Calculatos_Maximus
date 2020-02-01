@@ -157,11 +157,7 @@ class Py extends React.Component {
                         <input onChange={this.handleChange} id="cInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.cValue}></input>
                     </div>
                 </div>
-
-                <div onClick={this.displayRoundBox} className="round" >
-                    <h2>R</h2>
-                </div>
-                {this.roundInput()}
+                <Guide currentDisplay={this.props.currentDisplay} displayHelp={this.props.displayHelp}/>
             </div>
         )
     }

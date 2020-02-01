@@ -7,9 +7,16 @@ class CHelp extends React.Component {
         return (
             <div className='helpBox'>
                 <div className='text'>
-                <h2>Combinations</h2>
-                <p>Click on and input to clear the value</p>
+                    <h2>Combinations</h2>
+                    <p>Click on and input to clear the value</p>
+                    <p>Double Click on and input to clear all values</p>
                 </div>
+                <br></br>
+                <div className='imgDiv'>
+                    <img className='helpImg' src={CImg}></img>
+                </div>
+                <span>further reading <a href='https://www.mathsisfun.com/combinatorics/combinations-permutations.html' target='blank'>mathisfun.com</a></span>
+                <br></br>
             </div>
         )
     }

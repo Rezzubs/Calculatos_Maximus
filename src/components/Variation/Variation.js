@@ -79,6 +79,7 @@ class Variation extends React.Component {
                         <h1>{this.calculate()}</h1>
                     </div>
                 </div>
+                <Guide currentDisplay={this.props.currentDisplay} displayHelp={this.props.displayHelp}/>
             </div>
         )
     }
