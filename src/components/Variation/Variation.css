@@ -73,24 +73,3 @@ h1 {
     font-size: 5em;
     font-weight: bold;
 }
-
-
-@media only screen and (max-width: 1920px) {
-    .variation {
-        grid-template-columns: 4fr 1fr 3fr 4fr;
-    }
-    input {
-        height: 30%;
-    }
-  }
-  
-  @media only screen and (max-width: 1080px) {
-    .variation {
-        grid-template-columns: 4fr 2fr 3fr 4fr;
-        max-width: 90%;
-    }
-    input {
-        height: 50%;
-        font-size: 1em;
-    }
-  }
