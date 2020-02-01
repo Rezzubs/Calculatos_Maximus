@@ -11,7 +11,6 @@ class Py extends React.Component {
             aValue: '',
             bValue: '',
             cValue: '',
-            displayRoundBox: 1,
             rounding: defaultRounding
         };
 
@@ -20,9 +19,8 @@ class Py extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.clearValue = this.clearValue.bind(this);
         this.clearAll = this.clearAll.bind(this);
-        this.roundInput = this.roundInput.bind(this);
-        this.displayRoundBox = this.displayRoundBox.bind(this);
         this.roundChange = this.roundChange.bind(this);
+        this.clearRound = this.clearRound.bind(this);
     }
 
     getValue() {
@@ -95,29 +93,6 @@ class Py extends React.Component {
     }
 
     // roundJS
-    displayRoundBox() {
-        if (this.state.displayRoundBox == 0) {
-            this.setState({
-                displayRoundBox: 1
-            });
-        } else {
-            this.setState({
-                displayRoundBox: 0,
-                rounding: defaultRounding
-            });
-        }
-    }
-
-    roundInput() {
-        if (this.state.displayRoundBox == 1) {
-            return (
-                <div className="roundInputDiv">
-                    <input placeholder="Rounding" onChange={this.roundChange} id="roundInput" className="roundInput" onClick={this.clearValue}></input>
-                </div>
-            )
-        }
-    }
-
     roundChange(e) {
         let newValue = 1
         if (!e.target.value) {
@@ -139,6 +114,13 @@ class Py extends React.Component {
         }
     }
 
+    clearRound(e) {
+        e.target.value = '';
+        this.setState({
+            rounding: defaultRounding
+        })
+    }
+
 
     render() {
         return (
@@ -156,9 +138,11 @@ class Py extends React.Component {
                         <h1>c</h1>
                         <input onChange={this.handleChange} id="cInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.cValue}></input>
                     </div>
-                    {this.roundInput()}
+                    <div className="roundInputDiv">
+                        <input placeholder="Rounding" onChange={this.roundChange} id="roundInput" className="roundInput" onClick={this.clearRound}></input>
+                    </div>
                 </div>
-                <Guide currentDisplay={this.props.currentDisplay} displayHelp={this.props.displayHelp}/>
+                <Guide currentDisplay={this.props.currentDisplay} displayHelp={this.props.displayHelp} />
             </div>
         )
     }
