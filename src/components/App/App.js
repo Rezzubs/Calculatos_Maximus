@@ -18,7 +18,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       currentDisplay: 1,
-      displayHelp: 0
+      displayHelp: 1
     };
 
     this.changeToC = this.changeToC.bind(this);
@@ -48,7 +48,7 @@ class App extends React.Component {
 
   displayElement() {
     if (this.state.currentDisplay == 1) {
-      return <Combination />
+      return <Combination currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
     } else if (this.state.currentDisplay == 2) {
       return <Variation />
     } else if (this.state.currentDisplay == 3) {
@@ -95,7 +95,7 @@ class App extends React.Component {
           </div>
         </div>
         {this.displayElement()}
-        <Guide currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
+        
       </div>
     )
   }
