@@ -18,7 +18,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       currentDisplay: 3,
-      displayHelp: 1
+      displayHelp: 0
     };
 
     this.changeToC = this.changeToC.bind(this);

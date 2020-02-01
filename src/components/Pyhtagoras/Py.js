@@ -11,7 +11,8 @@ class Py extends React.Component {
             aValue: '',
             bValue: '',
             cValue: '',
-            rounding: defaultRounding
+            rounding: defaultRounding,
+            focusOrder: ''
         };
 
         this.getValue = this.getValue.bind(this);
@@ -21,6 +22,10 @@ class Py extends React.Component {
         this.clearAll = this.clearAll.bind(this);
         this.roundChange = this.roundChange.bind(this);
         this.clearRound = this.clearRound.bind(this);
+        this.aFocus = this.aFocus.bind(this);
+        this.bFocus = this.bFocus.bind(this);
+        this.cFocus = this.cFocus.bind(this);
+        this.holdStringAtTwo = this.holdStringAtTwo.bind(this);
     }
 
     getValue() {
@@ -35,10 +40,79 @@ class Py extends React.Component {
         })
     }
 
+    // calculate() {
+    //     const a = document.getElementById('aInput').value;
+    //     const b = document.getElementById('bInput').value;
+    //     const c = document.getElementById('cInput').value;
+
+    //     const a2 = a * a;
+    //     const b2 = b * b;
+    //     const c2 = c * c;
+
+    //     let rounding = this.state.rounding;
+
+    //     if (a && b) {
+    //         let answer = Math.sqrt(a2 + b2);
+    //         answer = Math.round(answer * rounding) / rounding;
+    //         this.setState({
+    //             cValue: answer
+    //         });
+    //         document.getElementById('cInput').value = this.state.cValue;
+    //     } else if (b && c) {
+    //         let answer = Math.sqrt(c2 - b2);
+    //         answer = Math.round(answer * rounding) / rounding;
+    //         this.setState({
+    //             aValue: answer
+    //         });
+    //     } else if (a && c) {
+    //         let answer = Math.sqrt(c2 - a2);
+    //         answer = Math.round(answer * rounding) / rounding;
+    //         this.setState({
+    //             bValue: answer
+    //         });
+    //     }
+    // }
+
+    aFocus(){
+        this.setState({
+            focusOrder: this.state.focusOrder + 'a'
+        })
+    }
+
+    bFocus() {
+        this.setState({
+            focusOrder: this.state.focusOrder + 'b'
+        })
+    }
+
+    cFocus(){
+        this.setState({
+            focusOrder: this.state.focusOrder + 'c'
+        })
+    }
+
+    holdStringAtTwo() {
+        let newString = this.state.focusOrder;
+            newString = newString.split("");
+            newString = newString.reverse();
+            newString = newString.join("");
+            newString = newString.slice(0, 2);
+
+            this.setState({
+                focusOrder: newString
+            })
+    }
+
     calculate() {
         const a = document.getElementById('aInput').value;
         const b = document.getElementById('bInput').value;
         const c = document.getElementById('cInput').value;
+
+        if (!a && !b && !c) {
+            this.setState({
+                focusOrder: ''
+            })
+        }
 
         const a2 = a * a;
         const b2 = b * b;
@@ -46,20 +120,27 @@ class Py extends React.Component {
 
         let rounding = this.state.rounding;
 
-        if (a && b) {
+        if (this.state.focusOrder.length > 2) {
+            this.holdStringAtTwo()
+        }
+
+        if (this.state.focusOrder == 'ab' || this.state.focusOrder == 'ba') {
             let answer = Math.sqrt(a2 + b2);
             answer = Math.round(answer * rounding) / rounding;
             this.setState({
                 cValue: answer
             });
             document.getElementById('cInput').value = this.state.cValue;
-        } else if (b && c) {
+        } else if (this.state.focusOrder == 'cb' || this.state.focusOrder == 'bc') {
             let answer = Math.sqrt(c2 - b2);
             answer = Math.round(answer * rounding) / rounding;
             this.setState({
                 aValue: answer
             });
-        } else if (a && c) {
+        } else if (this.state.focusOrder == 'ca' || this.state.focusOrder == 'ac') {
+            this.setState({
+                bValue: ''
+            });
             let answer = Math.sqrt(c2 - a2);
             answer = Math.round(answer * rounding) / rounding;
             this.setState({
@@ -121,22 +202,21 @@ class Py extends React.Component {
         })
     }
 
-
     render() {
         return (
             <div className="container">
                 <div className="Py">
                     <div className="a">
                         <h1>a</h1>
-                        <input onChange={this.handleChange} id="aInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.aValue}></input>
+                        <input onFocus={this.aFocus} onChange={this.handleChange} id="aInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.aValue}></input>
                     </div>
                     <div className="b">
                         <h1>b</h1>
-                        <input onChange={this.handleChange} id="bInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.bValue}></input>
+                        <input onFocus={this.bFocus} onChange={this.handleChange} id="bInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.bValue}></input>
                     </div>
                     <div className="c">
                         <h1>c</h1>
-                        <input onChange={this.handleChange} id="cInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.cValue}></input>
+                        <input onFocus={this.cFocus} onChange={this.handleChange} id="cInput" onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.cValue}></input>
                     </div>
                     <div className="roundInputDiv">
                         <input placeholder="Rounding" onChange={this.roundChange} id="roundInput" className="roundInput" onClick={this.clearRound}></input>
