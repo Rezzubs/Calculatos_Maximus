@@ -65,6 +65,9 @@ class Py extends React.Component {
             newString = newString.reverse();
             newString = newString.join("");
             newString = newString.slice(0, 2);
+            newString = newString.split("");
+            newString = newString.reverse();
+            newString = newString.join("");
 
             this.setState({
                 focusOrder: newString
