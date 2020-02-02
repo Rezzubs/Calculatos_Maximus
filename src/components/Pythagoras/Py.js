@@ -43,31 +43,25 @@ class Py extends React.Component {
 
     aFocus(){
         this.setState({
-            focusOrder: this.state.focusOrder + 'a'
+            focusOrder: 'a' + this.state.focusOrder
         })
     }
 
     bFocus() {
         this.setState({
-            focusOrder: this.state.focusOrder + 'b'
+            focusOrder: 'b' + this.state.focusOrder
         })
     }
 
     cFocus(){
         this.setState({
-            focusOrder: this.state.focusOrder + 'c'
+            focusOrder: 'c' + this.state.focusOrder
         })
     }
 
     holdStringAtTwo() {
         let newString = this.state.focusOrder;
-            newString = newString.split("");
-            newString = newString.reverse();
-            newString = newString.join("");
             newString = newString.slice(0, 2);
-            newString = newString.split("");
-            newString = newString.reverse();
-            newString = newString.join("");
 
             this.setState({
                 focusOrder: newString
@@ -76,9 +70,6 @@ class Py extends React.Component {
 
     holdStringAtOne() {
         let newString = this.state.focusOrder;
-            newString = newString.split("");
-            newString = newString.reverse();
-            newString = newString.join("");
             newString = newString.slice(0, 1);
 
             this.setState({
