@@ -26,6 +26,7 @@ class Py extends React.Component {
         this.bFocus = this.bFocus.bind(this);
         this.cFocus = this.cFocus.bind(this);
         this.holdStringAtTwo = this.holdStringAtTwo.bind(this);
+        this.holdStringAtOne = this.holdStringAtOne.bind(this);
     }
 
     getValue() {
@@ -103,51 +104,19 @@ class Py extends React.Component {
             })
     }
 
-    calculate() {
-        const a = document.getElementById('aInput').value;
-        const b = document.getElementById('bInput').value;
-        const c = document.getElementById('cInput').value;
+    holdStringAtOne() {
+        let newString = this.state.focusOrder;
+            newString = newString.split("");
+            newString = newString.reverse();
+            newString = newString.join("");
+            newString = newString.slice(0, 1);
 
-        if (!a && !b && !c) {
             this.setState({
-                focusOrder: ''
+                focusOrder: newString
             })
-        }
-
-        const a2 = a * a;
-        const b2 = b * b;
-        const c2 = c * c;
-
-        let rounding = this.state.rounding;
-
-        if (this.state.focusOrder.length > 2) {
-            this.holdStringAtTwo()
-        }
-
-        if (this.state.focusOrder == 'ab' || this.state.focusOrder == 'ba') {
-            let answer = Math.sqrt(a2 + b2);
-            answer = Math.round(answer * rounding) / rounding;
-            this.setState({
-                cValue: answer
-            });
-            document.getElementById('cInput').value = this.state.cValue;
-        } else if (this.state.focusOrder == 'cb' || this.state.focusOrder == 'bc') {
-            let answer = Math.sqrt(c2 - b2);
-            answer = Math.round(answer * rounding) / rounding;
-            this.setState({
-                aValue: answer
-            });
-        } else if (this.state.focusOrder == 'ca' || this.state.focusOrder == 'ac') {
-            this.setState({
-                bValue: ''
-            });
-            let answer = Math.sqrt(c2 - a2);
-            answer = Math.round(answer * rounding) / rounding;
-            this.setState({
-                bValue: answer
-            });
-        }
     }
+
+    
 
     handleChange() {
         this.getValue();
@@ -165,12 +134,14 @@ class Py extends React.Component {
         })
     }
 
-    clearAll() {
+    clearAll(e) {
         this.setState({
             aValue: '',
             bValue: '',
-            cValue: ''
+            cValue: '',
         })
+
+        this.holdStringAtOne()
     }
 
     // roundJS
@@ -200,6 +171,65 @@ class Py extends React.Component {
         this.setState({
             rounding: defaultRounding
         })
+    }
+
+    calculate() {
+        const a = document.getElementById('aInput').value;
+        const b = document.getElementById('bInput').value;
+        const c = document.getElementById('cInput').value;
+
+        if (!a && !b && !c) {
+            this.setState({
+                focusOrder: ''
+            })
+        }
+
+        const a2 = a * a;
+        const b2 = b * b;
+        const c2 = c * c;
+
+        let rounding = this.state.rounding;
+
+        if (this.state.focusOrder.length > 2) {
+            this.holdStringAtTwo()
+        }
+
+        //bug prevention
+        if ((this.state.focusOrder == 'ab' || this.state.focusOrder == 'ba') && (!b || !a)) {
+            this.setState({
+                cValue: ''
+            })
+        } else if ((this.state.focusOrder == 'cb' || this.state.focusOrder == 'bc') && (!c || !b)) {
+            this.setState({
+                aValue: ''
+            })
+        } else if ((this.state.focusOrder == 'ca' || this.state.focusOrder == 'ac') && (!c || !a)) {
+            this.setState({
+                bValue: ''
+            })  //bug end
+        } /*main calc*/ else if (this.state.focusOrder == 'ab' || this.state.focusOrder == 'ba') {
+            let answer = Math.sqrt(a2 + b2);
+            answer = Math.round(answer * rounding) / rounding;
+            this.setState({
+                cValue: answer
+            });
+            document.getElementById('cInput').value = this.state.cValue;
+        } else if (this.state.focusOrder == 'cb' || this.state.focusOrder == 'bc') {
+            let answer = Math.sqrt(c2 - b2);
+            answer = Math.round(answer * rounding) / rounding;
+            this.setState({
+                aValue: answer
+            });
+        } else if (this.state.focusOrder == 'ca' || this.state.focusOrder == 'ac') {
+            this.setState({
+                bValue: ''
+            });
+            let answer = Math.sqrt(c2 - a2);
+            answer = Math.round(answer * rounding) / rounding;
+            this.setState({
+                bValue: answer
+            });
+        }
     }
 
     render() {

@@ -12,7 +12,7 @@ class PyHelp extends React.Component {
                     <p><strong>Click</strong> on and input to clear the value</p>
                     <p><strong>Double Click</strong> on and input to clear all values</p>
                     <p><strong>Rounding</strong> changes the rounding decimal:</p>
-                    <p>1 -> 0.1, 2 -> 0.01 etc.</p>
+                    <p>1 -> 0.1, 2 -> 0.01 etc. default is 2</p>
                 </div>
                 <br></br>
                 <div className='imgDiv'>
