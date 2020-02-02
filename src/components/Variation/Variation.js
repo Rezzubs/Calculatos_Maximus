@@ -66,14 +66,14 @@ class Variation extends React.Component {
             <div className="container">
                 <div className="variation">
                     <div className="VImg">
-                        <img src={V}></img>
+                        <img src={V} alt="V"></img>
                     </div>
                     <div className="input">
                         <input className="upper" upperValue={this.state.upperValue} onChange={this.handleUpperChange} onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.upperValue}></input>
                         <input className="lower" lowerValue={this.state.lowerValue} onChange={this.handleLowerChange} onClick={this.clearValue} onDoubleClick={this.clearAll} value={this.state.lowerValue}></input>
                     </div>
                     <div className="equals">
-                        <img src={equals}></img>
+                        <img src={equals} alt="="></img>
                     </div>
                     <div className="answer">
                         <h1>{this.calculate()}</h1>

@@ -14,8 +14,8 @@ class VHelp extends React.Component {
                 </div>
                 <br></br>
                 <div className='imgDiv'>
-                    <img className='helpImg' src={VImg}></img>
-                    <img className='helpImg' src={VImg2}></img>
+                    <img className='helpImg' src={VImg} alt="Variation explenation"></img>
+                    <img className='helpImg' src={VImg2} alt="Variation explenation 2"></img>
                 </div>
                 <span>further reading <a href='https://www.mathsisfun.com/combinatorics/combinations-permutations.html' target='blank'>mathisfun.com</a></span>
             </div>

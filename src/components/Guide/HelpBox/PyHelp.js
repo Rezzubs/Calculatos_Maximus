@@ -16,8 +16,8 @@ class PyHelp extends React.Component {
                 </div>
                 <br></br>
                 <div className='imgDiv'>
-                    <img className='helpImg' src={Py1}></img>
-                    <img className='helpImg' src={Py2}></img>
+                    <img className='helpImg' src={Py1} alt="Pythagoras explenation"></img>
+                    <img className='helpImg' src={Py2} alt="Pythagoras explenation 2"></img>
                 </div>
                 <span>further reading <a href='https://www.mathsisfun.com/pythagoras.html' target='blank'>mathisfun.com</a></span>
             </div>

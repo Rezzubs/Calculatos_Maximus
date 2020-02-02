@@ -13,7 +13,7 @@ class CHelp extends React.Component {
                 </div>
                 <br></br>
                 <div className='imgDiv'>
-                    <img className='helpImg' src={CImg}></img>
+                    <img className='helpImg' src={CImg} alt="Combinations explenation"></img>
                 </div>
                 <span>further reading <a href='https://www.mathsisfun.com/combinatorics/combinations-permutations.html' target='blank'>mathisfun.com</a></span>
                 <br></br>

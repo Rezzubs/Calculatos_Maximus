@@ -41,39 +41,6 @@ class Py extends React.Component {
         })
     }
 
-    // calculate() {
-    //     const a = document.getElementById('aInput').value;
-    //     const b = document.getElementById('bInput').value;
-    //     const c = document.getElementById('cInput').value;
-
-    //     const a2 = a * a;
-    //     const b2 = b * b;
-    //     const c2 = c * c;
-
-    //     let rounding = this.state.rounding;
-
-    //     if (a && b) {
-    //         let answer = Math.sqrt(a2 + b2);
-    //         answer = Math.round(answer * rounding) / rounding;
-    //         this.setState({
-    //             cValue: answer
-    //         });
-    //         document.getElementById('cInput').value = this.state.cValue;
-    //     } else if (b && c) {
-    //         let answer = Math.sqrt(c2 - b2);
-    //         answer = Math.round(answer * rounding) / rounding;
-    //         this.setState({
-    //             aValue: answer
-    //         });
-    //     } else if (a && c) {
-    //         let answer = Math.sqrt(c2 - a2);
-    //         answer = Math.round(answer * rounding) / rounding;
-    //         this.setState({
-    //             bValue: answer
-    //         });
-    //     }
-    // }
-
     aFocus(){
         this.setState({
             focusOrder: this.state.focusOrder + 'a'
@@ -195,32 +162,32 @@ class Py extends React.Component {
         }
 
         //bug prevention
-        if ((this.state.focusOrder == 'ab' || this.state.focusOrder == 'ba') && (!b || !a)) {
+        if ((this.state.focusOrder === 'ab' || this.state.focusOrder === 'ba') && (!b || !a)) {
             this.setState({
                 cValue: ''
             })
-        } else if ((this.state.focusOrder == 'cb' || this.state.focusOrder == 'bc') && (!c || !b)) {
+        } else if ((this.state.focusOrder === 'cb' || this.state.focusOrder === 'bc') && (!c || !b)) {
             this.setState({
                 aValue: ''
             })
-        } else if ((this.state.focusOrder == 'ca' || this.state.focusOrder == 'ac') && (!c || !a)) {
+        } else if ((this.state.focusOrder === 'ca' || this.state.focusOrder === 'ac') && (!c || !a)) {
             this.setState({
                 bValue: ''
             })  //bug end
-        } /*main calc*/ else if (this.state.focusOrder == 'ab' || this.state.focusOrder == 'ba') {
+        } /*main calc*/ else if (this.state.focusOrder === 'ab' || this.state.focusOrder === 'ba') {
             let answer = Math.sqrt(a2 + b2);
             answer = Math.round(answer * rounding) / rounding;
             this.setState({
                 cValue: answer
             });
             document.getElementById('cInput').value = this.state.cValue;
-        } else if (this.state.focusOrder == 'cb' || this.state.focusOrder == 'bc') {
+        } else if (this.state.focusOrder === 'cb' || this.state.focusOrder === 'bc') {
             let answer = Math.sqrt(c2 - b2);
             answer = Math.round(answer * rounding) / rounding;
             this.setState({
                 aValue: answer
             });
-        } else if (this.state.focusOrder == 'ca' || this.state.focusOrder == 'ac') {
+        } else if (this.state.focusOrder === 'ca' || this.state.focusOrder === 'ac') {
             this.setState({
                 bValue: ''
             });

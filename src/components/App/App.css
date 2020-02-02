@@ -33,7 +33,8 @@ body {
 
 .navContainer {
   justify-self: flex-start;
-  min-width: 4%;
+  max-width: 20%;
+  min-width: 4em;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -42,7 +43,7 @@ body {
 
 .linkContainer {
   height: 100%;
-  width: auto;
+  width: 30%;
   display: flex;
 }
 
@@ -114,4 +115,18 @@ input:focus {
 #settings {
   filter: invert(90%);
   font-size: 4em;
+}
+
+
+/* media  */
+
+@media only screen and (max-height: 1080px) {
+  .settings {
+    height: 2.5em;
+    width: 2.5em;
+  }
+
+  #settings {
+    font-size: 3em;
+  }
 }

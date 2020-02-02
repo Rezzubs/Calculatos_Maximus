@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Guide from '../Guide/Guide'
 
 //component
 import Combination from '../Combination/Combination';
@@ -47,11 +46,11 @@ class App extends React.Component {
   }
 
   displayElement() {
-    if (this.state.currentDisplay == 1) {
+    if (this.state.currentDisplay === 1) {
       return <Combination currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
-    } else if (this.state.currentDisplay == 2) {
+    } else if (this.state.currentDisplay === 2) {
       return <Variation currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
-    } else if (this.state.currentDisplay == 3) {
+    } else if (this.state.currentDisplay === 3) {
       return <Py currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
     }
   }
@@ -81,13 +80,13 @@ class App extends React.Component {
         <div className="navbar">
           <div className="linkContainer" onClick={this.closeHelp}>
             <div onClick={this.changeToC} id="1" className="navContainer">
-              <img className="navImg" src={C}></img>
+              <img className="navImg" src={C} alt='Combinations'></img>
             </div>
             <div onClick={this.changeToV} id="2" className="navContainer">
-              <img className="navImg" src={V}></img>
+              <img className="navImg" src={V} alt='Variations'></img>
             </div>
             <div onClick={this.changeToPy} id="3" className="navContainer">
-              <img className="navImg" src={PyImg}></img>
+              <img className="navImg" src={PyImg} alt='Pythagoras'></img>
             </div>
           </div>
           <div className="settings" onClick={this.helpSwitch}>
