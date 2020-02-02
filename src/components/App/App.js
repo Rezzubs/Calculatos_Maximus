@@ -5,12 +5,12 @@ import Guide from '../Guide/Guide'
 //component
 import Combination from '../Combination/Combination';
 import Variation from '../Variation/Variation';
-import Py from '../Pyhtagoras/Py'
+import Py from '../Pythagoras/Py'
 
 //img
 import C from '../Combination/C.png'
 import V from '../Variation/V.png';
-import PyImg from '../Pyhtagoras/Py.png'
+import PyImg from '../Pythagoras/Py.png'
 
 
 class App extends React.Component {
