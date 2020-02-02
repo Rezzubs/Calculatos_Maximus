@@ -93,6 +93,10 @@ class Py extends React.Component {
             bValue: document.getElementById('bInput').value,
             cValue: document.getElementById('cInput').value
         })
+
+        if (this.state.focusOrder.length > 2) {
+            this.holdStringAtTwo()
+        }
     }
 
     clearAll(e) {
