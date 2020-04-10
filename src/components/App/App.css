@@ -19,7 +19,7 @@ body {
   height: 100%;
 
   display: grid;
-  grid-template-rows: 5% 95%;
+  grid-template-rows: 5vh 95vh;
 }
 
 
@@ -41,6 +41,7 @@ body {
   height: 100%;
   display: flex;
   cursor: pointer;
+  width: 5%;
 
   transition: 400ms ease-out;
 }
@@ -50,28 +51,39 @@ body {
 }
 
 .navImg {
-  margin: auto;
-  height: 90%;
-  width: 7.5em;
+  object-fit: cover;
   padding-left: 2em;
   padding-right: 2em;
 }
 
-#settings {
-  filter: invert(90%);
-  font-size: 4em;
+.helpSwitch {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 5vh;
+  cursor: pointer;
+  transition: 400ms ease-out;
+}
+
+.helpSwitch:hover {
+  cursor: pointer;
+  background-color: rgb(20, 20, 20);
+}
+
+.helpImg {
   user-select: none;
+  object-fit: cover;
+
   transition: 200ms ease-out;
 }
 
-#settings:hover {
+.helpImg:hover {
   transform: rotate(90deg);
 }
 
 /* navbar end */
 
 .container {
-  /* background-color: rgb(47, 77, 177); */
   display: grid;
 }
 
@@ -99,20 +111,27 @@ input:focus {
   background-color: rgb(233, 233, 233);
 }
 
-.settings:hover {
-  background-color: rgb(53, 53, 53);
-  cursor: pointer;
-}
-
 /* media  */
 
 @media only screen and (max-height: 1080px) {
-  .settings {
-    height: 2.5em;
-    width: 2.5em;
+  .navImg {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
-  #settings {
-    font-size: 3em;
+  .App {
+    grid-template-rows: 8vh 92vh;
+  }
+
+  .helpSwitch {
+    width: 8vh;
+  }
+
+}
+
+@media only screen and (max-height: 720px) {
+  .navImg {
+    padding-left: .5em;
+    paddign-right: .5em;
   }
 }

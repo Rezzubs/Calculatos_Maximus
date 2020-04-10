@@ -4,12 +4,13 @@ import './App.css';
 //component
 import Combination from '../Combination/Combination';
 import Variation from '../Variation/Variation';
-import Py from '../Pythagoras/Py'
+import Py from '../Pythagoras/Py';
 
 //img
-import C from './navC.png'
+import C from './navC.png';
 import V from './navV.png';
-import PyImg from './navPy.png'
+import PyImg from './navPy.png';
+import helpToggle from '../Guide/HelpBox/helpswitch.png';
 
 
 class App extends React.Component {
@@ -90,8 +91,8 @@ class App extends React.Component {
             </li>
           </ul>
 
-          <div className="navItem" onClick={this.helpSwitch}>
-            <i className="material-icons" id="settings">more_horiz</i>
+          <div className="helpSwitch" onClick={this.helpSwitch}>
+            <img className="helpImg" src={helpToggle} alt='help'></img>
           </div>
           {/* closehelp() ja helpswitch() vaja kasutada!!! */}
           
