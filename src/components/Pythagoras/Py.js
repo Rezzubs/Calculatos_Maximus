@@ -77,8 +77,6 @@ class Py extends React.Component {
             })
     }
 
-    
-
     handleChange() {
         this.getValue();
         this.calculate();

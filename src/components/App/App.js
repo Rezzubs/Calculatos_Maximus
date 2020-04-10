@@ -7,9 +7,9 @@ import Variation from '../Variation/Variation';
 import Py from '../Pythagoras/Py'
 
 //img
-import C from '../Combination/C.png'
-import V from '../Variation/V.png';
-import PyImg from '../Pythagoras/Py.png'
+import C from './navC.png'
+import V from './navV.png';
+import PyImg from './navPy.png'
 
 
 class App extends React.Component {
@@ -47,25 +47,25 @@ class App extends React.Component {
 
   displayElement() {
     if (this.state.currentDisplay === 1) {
-      return <Combination currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
+      return <Combination currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp} />
     } else if (this.state.currentDisplay === 2) {
-      return <Variation currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
+      return <Variation currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp} />
     } else if (this.state.currentDisplay === 3) {
-      return <Py currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp}/>
+      return <Py currentDisplay={this.state.currentDisplay} displayHelp={this.state.displayHelp} />
     }
   }
 
   helpSwitch() {
     if (!this.state.displayHelp) {
-        this.setState({
-            displayHelp: 1
-        })
+      this.setState({
+        displayHelp: 1
+      })
     } else {
-        this.setState({
-            displayHelp: 0
-        })
+      this.setState({
+        displayHelp: 0
+      })
     }
-}
+  }
 
   closeHelp() {
     this.setState({
@@ -74,27 +74,30 @@ class App extends React.Component {
   }
 
 
-  render(){
+  render() {
     return (
       <div className="App">
         <div className="navbar">
-          <div className="linkContainer" onClick={this.closeHelp}>
-            <div onClick={this.changeToC} id="1" className="navContainer">
+          <ul className="navItems">
+            <li className="navItem" onClick={this.changeToC} id="1">
               <img className="navImg" src={C} alt='Combinations'></img>
-            </div>
-            <div onClick={this.changeToV} id="2" className="navContainer">
+            </li>
+            <li className="navItem" onClick={this.changeToV} id="2">
               <img className="navImg" src={V} alt='Variations'></img>
-            </div>
-            <div onClick={this.changeToPy} id="3" className="navContainer">
+            </li >
+            <li className="navItem" onClick={this.changeToPy} id="3">
               <img className="navImg" src={PyImg} alt='Pythagoras'></img>
-            </div>
-          </div>
-          <div className="settings" onClick={this.helpSwitch}>
+            </li>
+          </ul>
+
+          <div className="navItem" onClick={this.helpSwitch}>
             <i className="material-icons" id="settings">more_horiz</i>
           </div>
+          {/* closehelp() ja helpswitch() vaja kasutada!!! */}
+          
         </div>
         {this.displayElement()}
-        
+
       </div>
     )
   }

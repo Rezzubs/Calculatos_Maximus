@@ -5,6 +5,7 @@
     height: 95%;
 
     display: grid;
+    transition: 200ms ease-out;
 }
 
 .helpBox {

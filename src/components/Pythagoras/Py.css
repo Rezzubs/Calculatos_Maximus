@@ -37,4 +37,9 @@ h1 {
 
 .roundInput {
     width: 40%;
+    transition: 200ms ease-out;
+}
+
+.roundInput:hover {
+    transform: scale(1.1);
 }
