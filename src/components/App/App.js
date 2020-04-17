@@ -92,7 +92,7 @@ class App extends React.Component {
           </ul>
 
           <div className="helpSwitch" onClick={this.helpSwitch}>
-            <img className="helpImg" src={helpToggle} alt='help'></img>
+            <img className="switchImg" src={helpToggle} alt='help'></img>
           </div>
           {/* closehelp() ja helpswitch() vaja kasutada!!! */}
           

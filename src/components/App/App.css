@@ -70,14 +70,14 @@ body {
   background-color: rgb(20, 20, 20);
 }
 
-.helpImg {
+.switchImg {
   user-select: none;
   object-fit: cover;
 
   transition: 200ms ease-out;
 }
 
-.helpImg:hover {
+.switchImg:hover {
   transform: rotate(90deg);
 }
 
